@@ -40,12 +40,12 @@ const Navbar = ({ onOpenResume }) => {
         </div>
 
         {/* Center: Desktop Menu Links */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-4 lg:space-x-8">
           {navLinks.map((link) => (
             <a 
               key={link} 
               href={`#${link.toLowerCase()}`}
-              className="text-white/80 hover:text-white font-medium relative group transition-colors duration-300"
+              className="text-white/80 hover:text-white text-xs lg:text-sm font-medium relative group transition-colors duration-300"
             >
               {link}
               {/* Smooth hover underline */}

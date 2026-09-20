@@ -85,5 +85,188 @@ section[data-stars="off"] {
   }
 }
 
+/* ============================================================ */
+/* HERO RESPONSIVE ENGINE (MOBILE / DESKTOP-SITE / DESKTOP)     */
+/* ============================================================ */
 
+/* Base / Portrait / Mobile / "Desktop Site" on Phone Viewports */
+.hero-section-container {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
+.hero-video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 52vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+@media (min-width: 640px) and (max-aspect-ratio: 1.15/1) {
+  .hero-video-wrapper {
+    height: 58vh;
+  }
+}
+
+.hero-video-elem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+}
+
+@media (min-width: 640px) and (max-aspect-ratio: 1.15/1) {
+  .hero-video-elem {
+    object-position: center 16%;
+  }
+}
+
+.hero-mobile-gradient-overlay {
+  display: block;
+}
+
+.hero-floating-socials {
+  display: none !important;
+}
+
+.hero-main-content {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 4rem;
+  padding-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .hero-main-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 5rem;
+    padding-top: 8rem;
+  }
+}
+
+.hero-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.hero-desktop-play-btn {
+  display: none !important;
+}
+
+.hero-scroll-down {
+  display: none !important;
+}
+
+/* REAL DESKTOP & WIDE LANDSCAPE (Width >= 1024px AND Aspect Ratio >= 1.15:1) */
+@media (min-width: 1024px) and (min-aspect-ratio: 1.15/1) {
+  .hero-section-container {
+    min-height: 0;
+    height: 100vh;
+    display: block;
+  }
+
+  .hero-video-wrapper {
+    height: 100%;
+  }
+
+  .hero-video-elem {
+    object-position: top;
+  }
+
+  .hero-mobile-gradient-overlay {
+    display: none !important;
+  }
+
+  .hero-floating-socials {
+    display: flex !important;
+  }
+
+  .hero-main-content {
+    position: absolute;
+    inset: 0;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 8%;
+    padding-top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .hero-top-bar {
+    display: none !important;
+  }
+
+  .hero-desktop-play-btn {
+    display: flex !important;
+  }
+
+  .hero-scroll-down {
+    display: block !important;
+  }
+}
+
+/* TABLET LANDSCAPE (Width between 768px and 1023px AND Aspect Ratio >= 1.2:1) */
+@media (min-width: 768px) and (max-width: 1023px) and (min-aspect-ratio: 1.2/1) {
+  .hero-section-container {
+    min-height: 0;
+    height: 100vh;
+    display: block;
+  }
+
+  .hero-video-wrapper {
+    height: 100%;
+  }
+
+  .hero-video-elem {
+    object-position: top;
+  }
+
+  .hero-mobile-gradient-overlay {
+    display: none !important;
+  }
+
+  .hero-main-content {
+    position: absolute;
+    inset: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 6%;
+    padding-top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .hero-top-bar {
+    display: none !important;
+  }
+
+  .hero-desktop-play-btn {
+    display: flex !important;
+  }
+}

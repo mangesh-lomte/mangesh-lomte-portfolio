@@ -86,28 +86,28 @@ const Hero = ({ onOpenResume }) => {
   };
 
   return (
-    <section id="home" className="relative w-full min-h-[100dvh] md:min-h-0 md:h-screen overflow-hidden bg-black font-sans flex flex-col justify-end">
+    <section id="home" className="hero-section-container font-sans">
       {/* Background Video Container */}
-      <div className="absolute top-0 left-0 w-full h-[52vh] sm:h-[58vh] md:h-full overflow-hidden z-0">
+      <div className="hero-video-wrapper">
         <video
           ref={videoRef}
           loop
           muted
           playsInline
           autoPlay
-          className="w-full h-full object-cover object-[center_12%] sm:object-[center_16%] md:object-top"
+          className="hero-video-elem"
         >
           <source src={heroVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         {/* Mobile Gradient Overlay for seamless video fade into solid dark background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent via-40% to-black z-[1] md:hidden pointer-events-none" />
+        <div className="hero-mobile-gradient-overlay absolute inset-0 bg-gradient-to-b from-black/50 via-transparent via-40% to-black z-[1] pointer-events-none" />
       </div>
 
 
       {/* Left Floating Social Bar for Large Screens */}
-      <div className="hidden lg:flex flex-col gap-6 fixed left-6 top-1/2 -translate-y-1/2 z-50 mix-blend-difference">
+      <div className="hero-floating-socials flex-col gap-6 fixed left-6 top-1/2 -translate-y-1/2 z-50 mix-blend-difference">
         <a 
           href={socialLinks.github} 
           target="_blank" 
@@ -144,7 +144,7 @@ const Hero = ({ onOpenResume }) => {
       </div>
 
       {/* Content Container */}
-      <div className="relative md:absolute md:inset-0 z-20 px-5 sm:px-6 pb-16 sm:pb-20 md:pb-[8%] md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-end md:justify-between items-start md:items-end text-left w-full pt-28 sm:pt-32 md:pt-0">
+      <div className="hero-main-content">
         
         {/* Left Side: Text and Buttons */}
         <div className="flex flex-col items-start text-left max-w-2xl w-full">
@@ -152,7 +152,7 @@ const Hero = ({ onOpenResume }) => {
           <div 
             data-aos="fade-up"
             data-aos-delay="100"
-            className="flex items-center justify-between w-full mb-3 md:hidden"
+            className="hero-top-bar"
           >
             {/* Social Links */}
             <div className="flex items-center gap-4">
@@ -251,7 +251,7 @@ const Hero = ({ onOpenResume }) => {
         <div 
           data-aos="zoom-in"
           data-aos-delay="600"
-          className="hidden md:flex flex-col items-center gap-2 md:gap-3 cursor-pointer group self-auto"
+          className="hero-desktop-play-btn flex-col items-center gap-2 md:gap-3 cursor-pointer group self-auto"
           onClick={toggleVideo}
         >
           <div className="w-12 h-12 md:w-20 md:h-20 rounded-full border border-white/30 bg-black/20 backdrop-blur-md flex justify-center items-center group-hover:scale-110 group-hover:bg-[#ff2a2a] transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_40px_rgba(255,42,42,0.6)]">
@@ -278,7 +278,7 @@ const Hero = ({ onOpenResume }) => {
       <div 
         data-aos="fade-up"
         data-aos-delay="800"
-        className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 pointer-events-none"
+        className="hero-scroll-down absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 pointer-events-none"
       >
         <div className="animate-bounce">
           <svg 
