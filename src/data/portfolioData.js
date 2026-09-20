@@ -772,7 +772,7 @@ export const certificates = {
 export const education = {
   degree: "B.Tech – Information Technology",
   institution: "Genba Sopanrao Moze College of Engineering",
-  cgpa: "7.22",
+  cgpa: "8.3",
   graduation: "2024",
   pgdac: "PG-DAC / C-DAC",
 };
