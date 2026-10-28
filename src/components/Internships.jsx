@@ -4,28 +4,32 @@ const InternshipCard = ({ intern, index }) => (
   <div 
     data-aos="fade-up"
     data-aos-delay={index * 150}
-    className="bg-black/20 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:scale-[1.02] hover:bg-black/35 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-500 flex flex-col justify-between"
+    className="bg-black/30 backdrop-blur-md border border-white/15 rounded-3xl p-7 md:p-8 hover:bg-black/45 hover:border-white/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.35)] transition-all duration-300 flex flex-col justify-between h-full"
   >
     <div>
-      <div className="flex justify-between items-start mb-6">
-        <span className="text-white/40 text-xs font-mono font-bold tracking-widest uppercase">
+      <div className="flex justify-between items-start mb-5 flex-wrap gap-2">
+        <span className="text-white/70 text-xs font-mono font-bold tracking-wider uppercase bg-black/40 px-3 py-1 rounded-full border border-white/10">
           {intern.duration}
         </span>
-        <span className="bg-white/10 text-white text-[10px] font-black tracking-widest uppercase py-1 px-3 rounded-full border border-white/15">
+        <span className="bg-white/15 text-white text-[10px] font-black tracking-widest uppercase py-1 px-3 rounded-full border border-white/20">
           Internship
         </span>
       </div>
+
       <h3 className="text-white text-2xl font-black mb-1 tracking-tight">
         {intern.role}
       </h3>
-      <p className="text-red-200 text-sm font-black tracking-wide mb-6 uppercase">
-        {intern.organization}
+      <p className="text-red-100 text-sm font-black tracking-wide mb-6 uppercase flex items-center gap-1.5">
+        <span>🏢</span>
+        <span>{intern.organization}</span>
       </p>
 
-      {/* Skills gained */}
+      {/* Responsibilities / Skills gained */}
       <div className="mb-6">
-        <h4 className="text-white/60 text-xs font-bold uppercase tracking-wider mb-2">Skills Gained:</h4>
-        <ul className="text-white/90 text-sm font-medium space-y-1 pl-4 list-disc">
+        <h4 className="text-white/70 text-xs font-bold uppercase tracking-wider mb-2.5">
+          Key Responsibilities & Deliverables:
+        </h4>
+        <ul className="text-white/90 text-xs sm:text-sm font-medium space-y-1.5 pl-4 list-disc">
           {intern.skills.map((skill, i) => (
             <li key={i}>{skill}</li>
           ))}
@@ -34,13 +38,15 @@ const InternshipCard = ({ intern, index }) => (
     </div>
 
     {/* Technologies used */}
-    <div className="pt-4 border-t border-white/10">
-      <h4 className="text-white/60 text-xs font-bold uppercase tracking-wider mb-3">Technologies:</h4>
+    <div className="pt-4 border-t border-white/15">
+      <h4 className="text-white/70 text-xs font-bold uppercase tracking-wider mb-2.5">
+        Technologies:
+      </h4>
       <div className="flex flex-wrap gap-2">
         {intern.tech.map((t) => (
           <span 
             key={t}
-            className="px-3 py-1 text-xs font-mono font-bold text-white bg-white/10 rounded-full border border-white/10 hover:bg-white/20 transition-all"
+            className="px-3 py-1 text-xs font-mono font-bold text-white bg-white/10 rounded-full border border-white/15 hover:bg-white/20 transition-all"
           >
             {t}
           </span>
@@ -64,19 +70,22 @@ const Internships = () => {
       <div className="max-w-6xl mx-auto relative z-20">
         
         {/* Header */}
-        <div data-aos="fade-up" className="mb-16 md:mb-20 text-center">
-          <h2 className="text-4xl md:text-5xl font-black text-black mb-4 tracking-tight uppercase">
+        <div data-aos="fade-up" className="mb-14 md:mb-16 text-center">
+          <div className="inline-block border border-black/20 rounded-full px-5 py-1.5 text-xs md:text-sm text-black font-bold mb-4 shadow-sm bg-black/10 tracking-wide">
+            Professional Experience
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-3 tracking-tight uppercase">
             Work Experience
           </h2>
-          <p className="text-red-100 text-base md:text-lg font-semibold max-w-lg mx-auto">
-            Practical internship where I applied engineering principles and built real-world assets.
+          <p className="text-red-100 text-sm md:text-base font-semibold max-w-lg mx-auto">
+            Hands-on internships engineering responsive web pages, developing features, integrating APIs, and testing workflows.
           </p>
         </div>
 
-        {/* Internship Cards Grid */}
-        <div className="flex justify-center max-w-3xl mx-auto">
+        {/* Internship Cards Grid (2-column on desktop) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
           {internshipsList.map((intern, index) => (
-            <div key={intern.role} className="w-full">
+            <div key={intern.role + intern.organization} className="w-full">
               <InternshipCard intern={intern} index={index} />
             </div>
           ))}
@@ -85,7 +94,7 @@ const Internships = () => {
       </div>
 
       {/* Decorative stars */}
-      <div className="absolute bottom-10 left-10 text-black opacity-20 animate-pulse">
+      <div className="absolute bottom-10 left-10 text-black opacity-20 animate-pulse pointer-events-none">
         <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0l2.5 8.5L23 12l-8.5 2.5L12 23l-2.5-8.5L1 12l8.5-2.5z"/></svg>
       </div>
     </section>

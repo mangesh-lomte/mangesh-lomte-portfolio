@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { aiKnowledgeBase, personalInfo, projects, internshipsList, education } from '../data/portfolioData';
+import { aiKnowledgeBase, personalInfo, projects, education } from '../data/portfolioData';
 
 const AIAssistant = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -76,71 +76,82 @@ const AIAssistant = () => {
   const generateAIResponse = (query) => {
     const q = query.toLowerCase();
 
-    // Project queries
-    if (q.includes('restaurant') || q.includes('qr') || q.includes('smart restaurant') || q.includes('flagship')) {
-      const p = projects.find(item => item.id === 'smart-restaurant-management');
-      return `**${p.title}** is Mangesh's flagship C-DAC project!\n\n` +
-        `• **Architecture**: React Frontend ➔ ASP.NET Core REST API ➔ SQL Server, plus a Python FastAPI machine learning microservice.\n` +
-        `• **Dashboards**: Features Customer (QR menu scanning & AI recommendations), Chef (kitchen order queue), and Admin (inventory & analytics) dashboards.\n` +
-        `• **Auth & AI**: Uses JWT authentication, OTP sign-in, and pandas AI models for item recommendation and demand prediction.`;
+    // TurfBook queries
+    if (q.includes('turf') || q.includes('turfbook') || q.includes('booking') || q.includes('venue')) {
+      return `**TurfBook** is Mangesh's flagship sports venue booking platform!\n\n` +
+        `• **Live Demo**: https://turf-book-real.vercel.app/\n` +
+        `• **GitHub**: https://github.com/mangesh-lomte/TurfBook\n` +
+        `• **Stack**: React, TypeScript, Tailwind CSS, Node.js, Express.js, Prisma ORM, PostgreSQL, Python FastAPI, Three.js.\n` +
+        `• **Key Engineering**: Uses PostgreSQL GiST exclusion constraints to eliminate overlapping bookings at the database level, and incorporates a Python FastAPI analytical microservice for dynamic pricing.`;
     }
 
-    if (q.includes('road safety') || q.includes('arduino') || q.includes('iot') || q.includes('safety system')) {
-      return `Mangesh built the **Road Safety Alert System** (2024), an IoT project using Arduino Uno R3, C++, ultrasonic sensors, servo motor barriers, and LED indicators to automate pedestrian safety crossing alerts.`;
+    // typeDon queries
+    if (q.includes('typedon') || q.includes('typing') || q.includes('typed') || q.includes('touch typing')) {
+      return `**typeDon** is Mangesh's competitive touch-typing platform built with a Modern-Noir aesthetic!\n\n` +
+        `• **Live Website**: https://type-don.vercel.app/\n` +
+        `• **GitHub**: https://github.com/mangesh-lomte/typeDon\n` +
+        `• **Stack**: React 19, TypeScript, Tailwind CSS v4, Framer Motion, SignalR, Vite, ASP.NET Core.\n` +
+        `• **Key Engineering**: Zero-latency keyboard telemetry HUD (WPM, Raw Speed, Accuracy, Consistency), 34-lesson touch typing academy across 5 progression stages, adaptive weak-key ngram drills, and a 7-tier syndicate reputation hierarchy.`;
+    }
+
+    // Restaurant project queries
+    if (q.includes('restaurant') || q.includes('qr') || q.includes('dining')) {
+      const p = projects.find(item => item.id === 'smart-restaurant-management');
+      return `**${p?.title || "Smart AI & QR-Based Restaurant Management System"}** is Mangesh's C-DAC PG-DAC capstone project!\n\n` +
+        `• **GitHub**: https://github.com/mangesh-lomte/Qr-Dining-main\n` +
+        `• **Architecture**: React Frontend ➔ ASP.NET Core REST API ➔ SQL Server, plus an independent Java Spring Boot notification microservice for Gmail SMTP.\n` +
+        `• **Dashboards**: Customer (contactless table QR menu), Chef (kitchen order queue), and Admin (menu & inventory CRUD) with JWT authentication.`;
     }
 
     if (q.includes('project') || q.includes('build') || q.includes('work') || q.includes('portfolio')) {
-      return `Mangesh has built two primary showcase projects:\n\n` +
-        `1. **AI + QR Smart Restaurant Management System** (Full-Stack ASP.NET Core, React, SQL Server, Python FastAPI, JWT Auth, AI models)\n` +
-        `2. **Road Safety Alert System** (IoT, C++, Arduino IDE, Servo Motors, Sensors)\n\n` +
-        `Click any project card on the page to open a detailed case study and interactive architecture diagram!`;
+      return `Mangesh has built three primary showcase projects:\n\n` +
+        `1. **TurfBook**: Full-Stack Sports Venue Booking Platform (Live: https://turf-book-real.vercel.app/)\n` +
+        `2. **typeDon**: Competitive Typing Platform (Live: https://type-don.vercel.app/)\n` +
+        `3. **Smart AI & QR Restaurant System**: C-DAC Microservices Application (GitHub: github.com/mangesh-lomte/Qr-Dining-main)\n\n` +
+        `Check out the interactive cards and live demos in the Projects section!`;
     }
 
     // Technology / Skill queries
-    if (q.includes('java') || q.includes('core java') || q.includes('oop')) {
-      return `Yes! Mangesh has strong expertise in **Java**. His skill set includes Object-Oriented Programming (OOP), Collections Framework, Exception Handling, JDBC, and Multithreading fundamentals. Java is one of his core languages.`;
+    if (q.includes('postgres') || q.includes('prisma') || q.includes('database') || q.includes('sql')) {
+      return `Mangesh works extensively with **PostgreSQL**, **Prisma ORM**, and **SQL Server**. In TurfBook, he engineered PostgreSQL GiST exclusion constraints with the btree_gist extension to prevent concurrent booking collisions at the database layer.`;
     }
 
-    if (q.includes('react') || q.includes('frontend') || q.includes('tailwind') || q.includes('javascript')) {
-      return `Mangesh specializes in **Frontend Development** with React 19, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS v4, Framer Motion, and REST API integration. He builds clean, responsive component architectures.`;
+    if (q.includes('typescript') || q.includes('react') || q.includes('frontend') || q.includes('tailwind')) {
+      return `Mangesh specializes in **Frontend Engineering** with React, TypeScript, Tailwind CSS, and Framer Motion. Both TurfBook and typeDon are built with TypeScript and React with high-performance, responsive UI and zero-latency interactions.`;
     }
 
-    if (q.includes('backend') || q.includes('api') || q.includes('.net') || q.includes('asp.net') || q.includes('node') || q.includes('express') || q.includes('fastapi')) {
-      return `Mangesh's **Backend & Microservice capabilities** include:\n\n` +
-        `• **ASP.NET Core**: REST APIs, role-based access control, JWT tokens, OTP verification.\n` +
-        `• **Node.js & Express.js**: REST API server design and JSON processing.\n` +
-        `• **Python FastAPI**: Asynchronous machine learning microservices connecting pandas data processing to React frontends.`;
-    }
-
-    if (q.includes('database') || q.includes('sql') || q.includes('mysql') || q.includes('sql server')) {
-      return `Mangesh is experienced with **SQL Server** and **MySQL**. He understands relational database design, schema normalization, complex SQL queries, joins, constraints, and entity modeling.`;
+    if (q.includes('node') || q.includes('express') || q.includes('backend') || q.includes('api') || q.includes('.net') || q.includes('asp.net')) {
+      return `Mangesh's **Backend capabilities** include:\n\n` +
+        `• **Node.js & Express.js**: REST API design, Prisma ORM integration, JWT authentication, and Swagger documentation (used in TurfBook).\n` +
+        `• **ASP.NET Core Web API**: Layered Architecture, Dependency Injection, and Entity Framework Core.\n` +
+        `• **Python FastAPI**: Microservices for dynamic pricing, analytics, and diagnostics.`;
     }
 
     if (q.includes('skill') || q.includes('tech stack') || q.includes('technologies')) {
       return `Mangesh's technical skillset spans:\n\n` +
-        `• **Languages**: Java, C++, Python, JavaScript\n` +
-        `• **Frontend**: React 19, Tailwind CSS, Hooks, State Management, REST Integration\n` +
-        `• **Backend**: ASP.NET Core REST API, Node.js, Express.js, JWT, FastAPI\n` +
-        `• **Databases**: SQL Server, MySQL\n` +
-        `• **CS Concepts**: OOP, DBMS, Data Structures & Algorithms, Software Architecture`;
+        `• **Frontend**: React.js, TypeScript, JavaScript (ES6+), Tailwind CSS, Three.js, Framer Motion\n` +
+        `• **Backend**: Node.js, Express.js, ASP.NET Core Web API, Java Spring Boot, FastAPI\n` +
+        `• **Databases**: PostgreSQL, Prisma ORM, SQL Server, MySQL, Entity Framework Core\n` +
+        `• **Tools & DevOps**: Git, GitHub, Docker, AWS EC2, Postman, Vite, VS Code`;
     }
 
     // Experience / Internship queries
     if (q.includes('internship') || q.includes('experience') || q.includes('job') || q.includes('work experience')) {
-      const intern = internshipsList[0];
-      return `Mangesh completed a **${intern.role}** from **${intern.duration}**. Key focus areas included Full Stack Development, API Integration, Database Design, and applying software engineering best practices using Java, React, Node.js, and SQL.`;
+      return `Mangesh has completed two practical internships:\n\n` +
+        `1. **Software Developer Intern** at **Nexprism** (May 2026 – Oct 2026): Web application development, implementation tasks, and software maintenance.\n` +
+        `2. **Web Developer Intern** at **Txon, Pune** (6 Months): Built responsive web pages with HTML, CSS, and JavaScript with focus on UX and testing.`;
     }
 
     // Education / Qualifications queries
-    if (q.includes('education') || q.includes('degree') || q.includes('college') || q.includes('c-dac') || q.includes('dac') || q.includes('gpa') || q.includes('cgpa')) {
+    if (q.includes('education') || q.includes('degree') || q.includes('college') || q.includes('c-dac') || q.includes('cgpa')) {
       return `Mangesh's academic background:\n\n` +
-        `• **${education.degree}**: ${education.institution} (Graduated ${education.graduation}, CGPA: ${education.cgpa})\n` +
-        `• **${education.pgdac}**: Centre for Development of Advanced Computing (Post Graduate Diploma in Advanced Computing)`;
+        `• **${education.degree}**: ${education.institution} (${education.graduation}, CGPA: ${education.cgpa})\n` +
+        `• **${education.pgdac}**: ${education.cdacInstitution} (${education.cdacYear})`;
     }
 
     // Contact / Location queries
-    if (q.includes('contact') || q.includes('email') || q.includes('reach') || q.includes('hire') || q.includes('location') || q.includes('where')) {
-      return `Mangesh is based in **${personalInfo.location}**. You can contact him directly using the Contact Form on this site, or connect with him via GitHub (github.com/mangesh-lomte) or LinkedIn (linkedin.com/in/mangesh-lomte).`;
+    if (q.includes('contact') || q.includes('email') || q.includes('reach') || q.includes('hire') || q.includes('location')) {
+      return `Mangesh is based in **${personalInfo.location}**. You can reach him via email at **${personalInfo.emails.primary}** or use the Contact Form on this site. GitHub: github.com/mangesh-lomte | LinkedIn: linkedin.com/in/mangesh-lomte.`;
     }
 
     // Who is Mangesh / Overview

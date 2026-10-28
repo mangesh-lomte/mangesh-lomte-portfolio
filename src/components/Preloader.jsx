@@ -3,9 +3,19 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { personalInfo } from '../data/portfolioData';
 
 const Preloader = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.has('no-preloader') || params.has('preview')) {
+        return false;
+      }
+    }
+    return true;
+  });
 
   useEffect(() => {
+    if (!isLoading) return;
+
     // Wait for the water fill animation (1.5s) + a small pause (0.5s)
     // before the shutter goes up smoothly.
     const timer = setTimeout(() => {
@@ -13,7 +23,7 @@ const Preloader = () => {
     }, 2200);
     
     return () => clearTimeout(timer);
-  }, []);
+  }, [isLoading]);
 
   return (
     <AnimatePresence>

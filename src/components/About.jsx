@@ -1,20 +1,9 @@
 import stackImage from '../assets/about/mangesh-avatar.png';
 import { aboutContent } from '../data/portfolioData';
 
-const JavaIcon = () => (
-  <div className="flex flex-col items-center gap-2">
-    <svg className="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 128 128">
-      <path fill="#EA2D2E" d="M47.617 98.12c-19.192 5.362 11.677 16.439 36.115 5.969-4.003-1.556-6.874-3.391-6.874-3.391-10.897 5.163-31.934 2.759-25.932-2.097 4.501-3.631 0 0-3.309-.481zM65.856 86.36c-11.756 6.392-26.996 7.086-18.907 1.186 0 0-7.915 5.163-16.747 9.202 0 0-2.31 2.259 8.003 2.981 17.168 1.199 43.879-.749 45.026-8.065 0 0 1.243-3.178-17.375-5.304z" />
-      <path fill="#EA2D2E" d="M83.528 71.122s5.58 5.784-6.154 10.372c-22.342 8.725-46.496.666-29.911-6.023 6.238-2.515 9.738-2.728 9.738-2.728s-3.397-2.4-11.715 2.103c-24.692 13.36 11.12 19.441 39.654 8.366 5.363-2.077 8.162-5.965 8.162-5.965-.001.001-9.774-6.125-9.774-6.125zM91.625 96.106c-.198.395-.461.781-.791 1.159 0 0 13.189-3.404 8.545-11.964-4.591-8.454-8.145-12.625 10.927-27.179 0 0-29.855 7.447-18.681 37.984z" />
-      <path fill="#EA2D2E" d="M76.203 0s11.752 11.752-11.146 29.835c-18.359 14.499-4.187 22.754-.005 32.198-10.7-9.662-18.555-18.159-13.29-26.074C59.003 24.494 80.823 18.793 76.203 0zM66.414 113.085c21.023 1.345 53.358-.745 54.156-10.672 0 0-1.473 3.777-17.441 6.776-18.02 3.384-40.215 2.988-53.367.819 0 .001 2.695 2.228 16.652 3.077z" />
-    </svg>
-    <span className="text-xs font-bold text-white/70 uppercase tracking-wider">Java</span>
-  </div>
-);
-
 const ReactIcon = () => (
   <div className="flex flex-col items-center gap-2">
-    <svg className="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 128 128">
+    <svg className="w-12 h-12 md:w-16 md:h-16" viewBox="0 0 128 128">
       <g stroke="#00d8ff" strokeWidth="4.5" fill="none" transform="translate(10, 10)">
         <ellipse cx="54" cy="54" rx="16" ry="46" transform="rotate(30 54 54)" />
         <ellipse cx="54" cy="54" rx="16" ry="46" transform="rotate(90 54 54)" />
@@ -22,16 +11,36 @@ const ReactIcon = () => (
         <circle cx="54" cy="54" r="7" fill="#00d8ff" />
       </g>
     </svg>
-    <span className="text-xs font-bold text-white/70 uppercase tracking-wider">React</span>
+    <span className="text-[11px] font-black text-black/90 uppercase tracking-wider">React</span>
+  </div>
+);
+
+const TypeScriptIcon = () => (
+  <div className="flex flex-col items-center gap-2">
+    <svg className="w-12 h-12 md:w-16 md:h-16 rounded-xl" viewBox="0 0 128 128">
+      <rect width="128" height="128" rx="20" fill="#3178C6" />
+      <path fill="#ffffff" d="M68.5 73.5c1.6 4.3 4.2 7.6 7.8 9.9 3.6 2.3 8 3.5 13.2 3.5 4.3 0 7.8-.8 10.5-2.4 2.7-1.6 4-3.8 4-6.6 0-2.3-1.1-4.2-3.3-5.7-2.2-1.5-5.9-2.8-11.1-3.9l-8.5-1.9c-7.2-1.6-12.6-4.2-16.2-7.8-3.6-3.6-5.4-8.4-5.4-14.4 0-6.8 2.5-12.2 7.5-16.2 5-4 11.9-6 20.7-6 7.4 0 13.7 1.6 18.9 4.8 5.2 3.2 8.6 7.9 10.2 14.1l-14.7 4.2c-1-3.2-2.7-5.6-5.1-7.2-2.4-1.6-5.5-2.4-9.3-2.4-3.8 0-6.8.8-9 2.4-2.2 1.6-3.3 3.6-3.3 6 0 2 1 3.6 3 4.8 2 1.2 5.5 2.3 10.5 3.5l8.5 1.9c7.6 1.7 13.2 4.4 16.8 8.1 3.6 3.7 5.4 8.6 5.4 14.7 0 7.3-2.6 13.1-7.8 17.4-5.2 4.3-12.5 6.4-21.9 6.4-9.1 0-16.7-2-22.8-6-6.1-4-9.9-9.8-11.4-17.4l14.9-3.4zM47.8 38v62.4H31.5V38H11V25h57.3v13H47.8z" />
+    </svg>
+    <span className="text-[11px] font-black text-black/90 uppercase tracking-wider">TypeScript</span>
   </div>
 );
 
 const NodeIcon = () => (
   <div className="flex flex-col items-center gap-2">
-    <svg className="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 128 128">
-      <path fill="#339933" d="M64 10l50 28.8v57.6L64 125.2 14 96.4V38.8L64 10zm0 10.4L23 43.8v48.4L64 114.6l41-22.4V43.8L64 20.4z" />
+    <svg className="w-12 h-12 md:w-16 md:h-16" viewBox="0 0 128 128">
+      <path fill="#222222" d="M64 10l50 28.8v57.6L64 125.2 14 96.4V38.8L64 10zm0 10.4L23 43.8v48.4L64 114.6l41-22.4V43.8L64 20.4z" />
     </svg>
-    <span className="text-xs font-bold text-white/70 uppercase tracking-wider">Node.js</span>
+    <span className="text-[11px] font-black text-black/90 uppercase tracking-wider">Node.js</span>
+  </div>
+);
+
+const PostgresIcon = () => (
+  <div className="flex flex-col items-center gap-2">
+    <svg className="w-12 h-12 md:w-16 md:h-16" viewBox="0 0 128 128">
+      <circle cx="64" cy="64" r="56" fill="#336791" />
+      <path fill="#ffffff" d="M63.6 28c-18.6 0-31.5 12.2-31.5 29.8 0 14.9 9.2 25.8 22.6 28.8v12.5c0 3.4 2.7 6.1 6.1 6.1h5.4c3.4 0 6.1-2.7 6.1-6.1V86.6c13.4-3 22.6-13.9 22.6-28.8 0-17.6-12.9-29.8-31.3-29.8zm-9 41.6c-5.6-1.2-9.5-6.1-9.5-11.9 0-6.8 5.5-12.3 12.3-12.3s12.3 5.5 12.3 12.3c0 5.7-3.9 10.7-9.5 11.9l-5.6-1.6v1.6z" />
+    </svg>
+    <span className="text-[11px] font-black text-black/90 uppercase tracking-wider">PostgreSQL</span>
   </div>
 );
 
@@ -39,10 +48,10 @@ const About = () => {
   return (
     <>
       <section id="about" data-stars="off" className="bg-[#ff2a2a] pt-20 pb-40 px-6 md:px-12 w-full relative overflow-hidden font-sans">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-start">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 md:gap-16 items-center md:items-start">
 
           {/* Left Side: ID Badge */}
-          <div className="flex flex-col items-center w-full md:w-[350px] shrink-0 mt-12 md:mt-0">
+          <div className="flex flex-col items-center w-full md:w-[350px] shrink-0 mt-8 md:mt-0">
             <div data-aos="drop-bounce" className="relative flex justify-center w-full">
               {/* Lanyard string */}
               <div className="absolute -top-32 left-1/2 w-3 h-40 bg-black transform -translate-x-1/2 shadow-inner z-0"></div>
@@ -68,38 +77,51 @@ const About = () => {
           </div>
 
           {/* Right Side: Info Content */}
-          <div data-aos="fade-left" data-aos-delay="200" className="flex-1 text-white mt-8 md:mt-0 relative z-20">
-            <h2 className="text-4xl md:text-5xl font-black text-black mb-4">{aboutContent.heading}</h2>
+          <div data-aos="fade-left" data-aos-delay="200" className="flex-1 text-white mt-4 md:mt-0 relative z-20">
+            <div className="inline-block px-3.5 py-1 rounded-full bg-black/15 text-black font-mono font-bold text-xs uppercase tracking-widest mb-3">
+              Developer Profile
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-4 tracking-tight">
+              {aboutContent.heading}
+            </h2>
             <p
-              className="text-lg font-bold mb-12 leading-relaxed max-w-3xl text-red-50"
+              className="text-base md:text-lg font-bold mb-8 leading-relaxed max-w-3xl text-red-50"
               dangerouslySetInnerHTML={{ __html: aboutContent.bio }}
             />
 
-            {/* Horizontal Skills Row */}
-            <div className="flex items-center gap-10 mt-8">
-              <div data-aos="zoom-in" data-aos-delay="300" className="hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl">
-                <JavaIcon />
-              </div>
-              <div data-aos="zoom-in" data-aos-delay="450" className="hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl">
-                <ReactIcon />
-              </div>
-              <div data-aos="zoom-in" data-aos-delay="600" className="hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl">
-                <NodeIcon />
+            {/* Core Tech Stack Icons Row */}
+            <div className="pt-4 border-t border-black/15">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-black/70 block mb-4">
+                Primary Core Stack
+              </span>
+              <div className="flex flex-wrap items-center gap-6 sm:gap-8">
+                <div data-aos="zoom-in" data-aos-delay="300" className="hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-lg">
+                  <ReactIcon />
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="400" className="hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-lg">
+                  <TypeScriptIcon />
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="500" className="hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-lg">
+                  <NodeIcon />
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="600" className="hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-lg">
+                  <PostgresIcon />
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Decorative stars */}
-        <div className="absolute top-10 right-10 md:right-20 text-black opacity-30 animate-pulse">
+        <div className="absolute top-10 right-10 md:right-20 text-black opacity-30 animate-pulse pointer-events-none">
           <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0l2.5 8.5L23 12l-8.5 2.5L12 23l-2.5-8.5L1 12l8.5-2.5z" /></svg>
         </div>
-        <div className="absolute bottom-32 left-4 md:left-20 text-black opacity-30 animate-pulse" style={{ animationDelay: '1s' }}>
+        <div className="absolute bottom-32 left-4 md:left-20 text-black opacity-30 animate-pulse pointer-events-none" style={{ animationDelay: '1s' }}>
           <svg className="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0l2.5 8.5L23 12l-8.5 2.5L12 23l-2.5-8.5L1 12l8.5-2.5z" /></svg>
         </div>
       </section>
 
-      {/* Separate Red Wavy Divider extending downward */}
+      {/* Red Wavy Divider extending downward */}
       <div data-stars="off" className="w-full h-[60px] md:h-[80px] overflow-hidden -mt-1 relative z-20 bg-transparent">
         <svg
           viewBox="0 0 1200 120"

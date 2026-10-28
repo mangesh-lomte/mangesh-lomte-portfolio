@@ -7,14 +7,16 @@ export const personalInfo = {
   firstName: "Mangesh",
   brandName: "Mangesh Lomte",
   title: "Software Developer",
-  location: "Vapi, Gujarat, India",
-  phone: "",
+  roleHeadline: "Software Developer | Full-Stack Web Development",
+  specialization: "Full-Stack Web Development",
+  location: "Pune, India",
+  phone: "+91 9737930634",
   emails: {
-    primary: "",
+    primary: "mangesh.lomte.2002@gmail.com",
     secondary: "",
   },
   summary:
-    "B.Tech Information Technology graduate and PG-DAC professional focused on software development, full-stack applications, service-oriented architecture, databases, and solving real-world problems through technology.",
+    "Full-Stack Developer with a B.Tech in Information Technology and C-DAC PGCP-AC training, focused on building responsive, high-performance web applications with React.js, TypeScript, Node.js, Express.js, and PostgreSQL. Comfortable with API integration, authentication, database design, debugging, and Git-based development.",
   resumeUrl: "/Resume.pdf",
 };
 
@@ -25,478 +27,308 @@ export const socialLinks = {
 };
 
 export const heroContent = {
-  greeting: "Hi, I'm Mangesh",
+  greeting: "Hi, I'm",
+  name: "Mangesh Lomte",
   titleHighlight: "Software Developer",
+  roleSubline: "Specializing in Full-Stack Web Development",
   subtitle:
-    "I build practical applications spanning React, ASP.NET Core, Java Spring Boot, SQL Server, Docker, and IoT embedded C++.",
-  ctaPrimary: { text: "View My Work", href: "#projects" },
-  ctaSecondary: {
-    text: "Contact Me",
-    href: "#contact",
-  },
+    "Building practical, responsive web applications with React, TypeScript, Node.js, Express, and PostgreSQL — engineering high-concurrency booking platforms, competitive tools, and service-oriented systems.",
+  ctaPrimary: { text: "View Projects", href: "#projects" },
+  ctaGithub: { text: "GitHub", href: "https://github.com/mangesh-lomte" },
+  ctaSecondary: { text: "Contact Me", href: "#contact" },
   ctaResume: { text: "Download Resume", href: "/Resume.pdf" },
 };
 
 export const aboutContent = {
-  heading: "Hello!",
-  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Mangesh Lomte</span>, a B.Tech Information Technology graduate and PG-DAC professional focused on full-stack software development, REST API design, database modeling, containerized services, and IoT engineering.`,
-  techStack: ["React.js", "ASP.NET Core", "Spring Boot", "SQL Server", "Docker", "C++"],
+  heading: "About Me",
+  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Mangesh Lomte</span>, a Software Developer with a B.Tech in Information Technology and C-DAC PGCP-AC training. I specialize in full-stack web development with React, TypeScript, Node.js, Express.js, and PostgreSQL. I build practical, user-centered applications — from sports venue booking platforms with database-level conflict prevention to modern competitive typing applications and service-oriented management platforms.`,
+  techStack: ["React.js", "TypeScript", "Node.js", "PostgreSQL", "Express.js", "ASP.NET Core"],
 };
 
-export const engineeringArchitecture = {
-  badge: "System Architecture Showcase",
-  heading: "Engineering Behind My Projects",
-  subtitle:
-    "From user interaction to backend services, data, security, notifications, and cloud deployment — see how the technologies in my projects work together.",
-  
-  // Interactive Technology Map Nodes
-  techNodes: [
-    {
-      id: "react",
-      name: "React.js",
-      layer: "Frontend",
-      subtitle: "React.js — Single Page Frontend",
-      description:
-        "Used to build responsive, component-based interfaces for Customer, Chef, and Admin roles in the Smart Restaurant System.",
-      usedInProjectIds: ["smart-restaurant-management"],
-      usedInProjectNames: ["Smart AI & QR-Based Restaurant Management System"],
-      category: "Frontend"
-    },
-    {
-      id: "javascript",
-      name: "JavaScript / HTML / CSS",
-      layer: "Frontend",
-      subtitle: "JavaScript / Tailwind CSS — Client Logic & Styling",
-      description:
-        "Used for DOM manipulation, client-side state handling, dynamic UI rendering, and styling across web applications.",
-      usedInProjectIds: ["smart-restaurant-management"],
-      usedInProjectNames: ["Smart AI & QR-Based Restaurant Management System"],
-      category: "Frontend"
-    },
-    {
-      id: "aspnet-core",
-      name: "ASP.NET Core Web API",
-      layer: "Backend & REST APIs",
-      subtitle: "ASP.NET Core — Core API & Business Layer",
-      description:
-        "Serves as the main REST API layer implementing Layered Architecture, Dependency Injection, and business logic controllers.",
-      usedInProjectIds: ["smart-restaurant-management"],
-      usedInProjectNames: ["Smart AI & QR-Based Restaurant Management System"],
-      category: "Backend"
-    },
-    {
-      id: "ef-core",
-      name: "Entity Framework Core",
-      layer: "Data Access / ORM",
-      subtitle: "EF Core — Relational Data Access",
-      description:
-        "Used for object-relational mapping (ORM) connecting ASP.NET Core services cleanly to SQL Server relational tables.",
-      usedInProjectIds: ["smart-restaurant-management"],
-      usedInProjectNames: ["Smart AI & QR-Based Restaurant Management System"],
-      category: "Backend"
-    },
-    {
-      id: "sql-server",
-      name: "SQL Server",
-      layer: "Relational Database",
-      subtitle: "SQL Server — Application Data Store",
-      description:
-        "Stores structured relational tables for Users, Menus, Categories, Orders, OrderItems, Inventory, Staff, and Offers.",
-      usedInProjectIds: ["smart-restaurant-management"],
-      usedInProjectNames: ["Smart AI & QR-Based Restaurant Management System"],
-      category: "Data"
-    },
-    {
-      id: "spring-boot",
-      name: "Java Spring Boot",
-      layer: "Microservices / Notification",
-      subtitle: "Java Spring Boot — Email Notification Service",
-      description:
-        "An independent microservice that receives email notification requests from the main application and dispatches emails via Gmail SMTP.",
-      usedInProjectIds: ["smart-restaurant-management"],
-      usedInProjectNames: ["Smart AI & QR-Based Restaurant Management System"],
-      category: "Services"
-    },
-    {
-      id: "jwt-rbac",
-      name: "JWT & Role-Based Security",
-      layer: "Security & Auth",
-      subtitle: "JWT & RBAC — Authentication & Authorization",
-      description:
-        "Handles user registration, login, JWT token generation, validation, and role-based access control for Customer, Chef, and Admin roles.",
-      usedInProjectIds: ["smart-restaurant-management"],
-      usedInProjectNames: ["Smart AI & QR-Based Restaurant Management System"],
-      category: "Security"
-    },
-    {
-      id: "docker-aws",
-      name: "Docker & AWS EC2",
-      layer: "DevOps & Cloud",
-      subtitle: "Docker Containerization & AWS EC2 Deployment",
-      description:
-        "Used to containerize application services and deploy them onto AWS EC2 instances for cloud accessibility.",
-      usedInProjectIds: ["smart-restaurant-management"],
-      usedInProjectNames: ["Smart AI & QR-Based Restaurant Management System"],
-      category: "DevOps"
-    },
-    {
-      id: "cpp-arduino",
-      name: "C++ & Arduino UNO R3",
-      layer: "Embedded / IoT",
-      subtitle: "C++ & Arduino UNO R3 — Microcontroller Logic",
-      description:
-        "Used to program 3 servo motors (2 vehicle barriers at ~45°, 1 pedestrian crossing at ~90°) and traffic signal LEDs for safety automation.",
-      usedInProjectIds: ["road-safety-alert-system"],
-      usedInProjectNames: ["Road Safety Alert System"],
-      category: "IoT"
-    }
-  ],
-
-  // Featured Project Architecture: Smart AI & QR-Based Restaurant Management System
-  featuredProject: {
-    id: "smart-restaurant-management",
-    title: "Smart AI & QR-Based Restaurant Management System",
-    subtitle: "Service-Oriented Full-Stack Architecture, Spring Boot Service & Cloud Deployment",
-    
-    // Web & Database Flow
-    webFlow: [
-      {
-        step: "01",
-        layer: "Customer Layer",
-        title: "Customer Table QR",
-        tech: "QR Code Scan",
-        role: "Customer scans table-specific QR code to launch digital menu interface without physical paper menus."
-      },
-      {
-        step: "02",
-        layer: "Frontend Layer",
-        title: "React.js Frontend",
-        tech: "React + Tailwind CSS",
-        role: "Renders responsive interfaces for Customer ordering, Chef kitchen display, and Admin operations."
-      },
-      {
-        step: "03",
-        layer: "API Layer",
-        title: "ASP.NET Core REST API",
-        tech: "C# Controllers & DI",
-        role: "Receives REST calls, validates JWT tokens, handles business logic, and manages order state transitions."
-      },
-      {
-        step: "04",
-        layer: "Data Access Layer",
-        title: "Entity Framework Core",
-        tech: "EF Core ORM",
-        role: "Maps domain objects to relational queries with dependency injection and repository patterns."
-      },
-      {
-        step: "05",
-        layer: "Database Layer",
-        title: "SQL Server",
-        tech: "Relational Storage",
-        role: "Stores Users, Menus, Categories, Orders, OrderItems, Inventory Stock, Staff, and Offers."
-      }
-    ],
-
-    // Java Spring Boot Notification Flow
-    notificationFlow: [
-      {
-        step: "01",
-        title: "Main Application",
-        tech: "REST Request Trigger",
-        role: "Order Service dispatches notification request upon order creation or milestone status update."
-      },
-      {
-        step: "02",
-        title: "Java Spring Boot Service",
-        tech: "Spring Boot Microservice",
-        role: "Independent service endpoint parses notification payloads and handles async queue processing."
-      },
-      {
-        step: "03",
-        title: "Gmail SMTP Integration",
-        tech: "JavaMail / SMTP Protocol",
-        role: "Establishes secure TLS connection with Gmail SMTP server to send confirmation emails."
-      },
-      {
-        step: "04",
-        title: "Recipient Email Delivery",
-        tech: "Email Notification",
-        role: "Delivers email receipt or alert notification to specified customer or staff recipient."
-      }
-    ],
-
-    // Authentication & RBAC Flow
-    authFlow: [
-      {
-        step: "01",
-        title: "User Credentials",
-        tech: "Registration / Login Form",
-        role: "User submits email and password credentials over HTTPS to authentication endpoints."
-      },
-      {
-        step: "02",
-        title: "ASP.NET Core Auth",
-        tech: "Password Hash & Auth Service",
-        role: "Validates credentials against database records and claims user roles."
-      },
-      {
-        step: "03",
-        title: "JWT Token Generation",
-        tech: "JSON Web Token (JWT)",
-        role: "Generates signed JWT token containing user identity, roles, and expiration timestamp."
-      },
-      {
-        step: "04",
-        title: "JWT Validation & RBAC",
-        tech: "Middleware Authorization",
-        role: "Validates incoming Authorization headers and enforces role-based access for Customer, Chef, and Admin endpoints."
-      }
-    ],
-
-    // Docker & AWS EC2 Flow
-    deploymentFlow: [
-      {
-        step: "01",
-        title: "Application Build",
-        tech: "Production Bundles",
-        role: "Vite compiles React static assets and .NET SDK compiles C# API binaries."
-      },
-      {
-        step: "02",
-        title: "Docker Containerization",
-        tech: "Dockerfiles & Container Images",
-        role: "Packages frontend and backend services into isolated Docker container images."
-      },
-      {
-        step: "03",
-        title: "AWS EC2 Deployment",
-        tech: "AWS EC2 Instance",
-        role: "Deploys Docker containers onto cloud-hosted AWS EC2 Linux virtual server instances."
-      }
-    ],
-
-    // Intelligent Operations Foundation
-    aiFoundation: {
-      title: "Python / AI Foundation for Intelligent Operations",
-      subtitle: "Architectural Foundation for Smart Restaurant Analytics",
-      description:
-        "The application architecture incorporates a Python data-processing foundation designed to support intelligent restaurant operations, such as analyzing order history trends and structured menu data for future operational insights."
-    }
-  },
-
-  // "How It Connects" Conceptual Request Flow
-  howItConnects: [
-    { title: "QR Table Access", desc: "Customer scans table QR code to open session and browse digital menu." },
-    { title: "React SPA Action", desc: "Customer selects menu items and dispatches HTTP POST order payload." },
-    { title: "REST API Endpoint", desc: "ASP.NET Core validates JWT header and forwards payload to Order Service." },
-    { title: "Order Processing", desc: "Order Service verifies item availability and executes transaction rules." },
-    { title: "EF Core & SQL Server", desc: "Entity Framework persists order and item records to SQL Server." },
-    { title: "Notification Request", desc: "Order Service sends notification payload to Java Spring Boot service." },
-    { title: "Gmail SMTP Delivery", desc: "Spring Boot dispatches email receipt via Gmail SMTP protocol." },
-    { title: "Client Confirmation", desc: "React frontend receives confirmation response and updates order status." }
-  ],
-
-  // Technical Capability Cards ("What I Work With")
-  capabilityCategories: [
-    {
-      category: "Frontend",
-      skills: ["React.js", "Tailwind CSS", "HTML5", "CSS3", "JavaScript"]
-    },
-    {
-      category: "Backend",
-      skills: ["ASP.NET Core Web API", "C#", "Entity Framework Core", "REST APIs"]
-    },
-    {
-      category: "Database",
-      skills: ["SQL Server", "Relational Database Design", "CRUD Operations"]
-    },
-    {
-      category: "Services & Security",
-      skills: ["Java", "Spring Boot", "Gmail SMTP", "JWT Authentication", "Role-Based Auth (RBAC)"]
-    },
-    {
-      category: "DevOps & Tools",
-      skills: ["Docker", "AWS EC2", "Git", "GitHub", "Visual Studio", "VS Code", "Postman"]
-    },
-    {
-      category: "IoT / Embedded",
-      skills: ["C++", "Arduino UNO R3", "Servo Motors", "LED Signal Logic"]
-    }
-  ],
-
-  // Proof of Skill (SKILL → PROJECT → EVIDENCE)
-  skillEvidence: [
-    {
-      skill: "React.js",
-      projectTitle: "Smart AI & QR-Based Restaurant Management System",
-      projectId: "smart-restaurant-management",
-      evidence: "Digital Menu Interface, Customer/Chef/Admin Dashboards & State Handling"
-    },
-    {
-      skill: "ASP.NET Core Web API",
-      projectTitle: "Smart AI & QR-Based Restaurant Management System",
-      projectId: "smart-restaurant-management",
-      evidence: "Layered Architecture, Dependency Injection & REST Controller Endpoints"
-    },
-    {
-      skill: "SQL Server & EF Core",
-      projectTitle: "Smart AI & QR-Based Restaurant Management System",
-      projectId: "smart-restaurant-management",
-      evidence: "Relational Schema Design & Entity Framework Data Access"
-    },
-    {
-      skill: "Java & Spring Boot",
-      projectTitle: "Smart AI & QR-Based Restaurant Management System",
-      projectId: "smart-restaurant-management",
-      evidence: "Independent Notification Service & Gmail SMTP Integration"
-    },
-    {
-      skill: "JWT & Security",
-      projectTitle: "Smart AI & QR-Based Restaurant Management System",
-      projectId: "smart-restaurant-management",
-      evidence: "Token Generation, Validation & Customer/Chef/Admin Role-Based Authorization"
-    },
-    {
-      skill: "Docker & AWS EC2",
-      projectTitle: "Smart AI & QR-Based Restaurant Management System",
-      projectId: "smart-restaurant-management",
-      evidence: "Service Containerization & Deployment onto AWS EC2 Virtual Servers"
-    },
-    {
-      skill: "C++ & Arduino",
-      projectTitle: "Road Safety Alert System",
-      projectId: "road-safety-alert-system",
-      evidence: "3 Servo Barrier Control (~45°/90°), Traffic Signal LED Timing in Arduino IDE"
-    }
-  ],
-
-  // College Project vs C-DAC Project Growth Comparison
-  projectComparison: {
-    badge: "Engineering Progression",
-    heading: "College IoT Project vs. C-DAC Full-Stack Project",
-    subtitle: "Demonstrating growth from hardware/software embedded control to multi-tier service-oriented software engineering.",
-    rows: [
-      {
-        aspect: "Domain",
-        college: "IoT / Embedded Systems / Road Safety",
-        cdac: "Full-Stack Web App / Restaurant Management"
-      },
-      {
-        aspect: "Core Technology",
-        college: "Arduino UNO R3",
-        cdac: "React.js + ASP.NET Core + Java Spring Boot"
-      },
-      {
-        aspect: "Programming Languages",
-        college: "C++",
-        cdac: "C# + Java + JavaScript"
-      },
-      {
-        aspect: "Database",
-        college: "Not used (Microcontroller RAM)",
-        cdac: "SQL Server (Entity Framework Core)"
-      },
-      {
-        aspect: "Security & Auth",
-        college: "Direct Hardware Circuitry",
-        cdac: "JWT Authentication + Role-Based Access Control (RBAC)"
-      },
-      {
-        aspect: "Deployment",
-        college: "Physical Hardware Breadboard Prototype",
-        cdac: "Docker Containers + AWS EC2 Cloud Hosting"
-      },
-      {
-        aspect: "Key Feature",
-        college: "Automated vehicle barrier & pedestrian crossing control",
-        cdac: "QR Digital Menu Access + Service-Oriented Management"
-      }
-    ],
-    progressionText: "HARDWARE / IoT  →  FULL-STACK SOFTWARE ENGINEERING  →  SERVICE-ORIENTED ARCHITECTURE  →  CLOUD DEPLOYMENT"
-  }
-};
-
-// Technical Skills Data (Concept-based, realistic grouping)
+// Technical Skills Data (Concept-based, realistic grouping verified against resume & repos)
 export const technicalSkills = {
   categories: [
     {
-      title: "Backend & Web APIs",
-      concepts: ["ASP.NET Core Web API", "C# Programming", "RESTful Architecture", "Layered Architecture", "Dependency Injection", "Java & Spring Boot Fundamentals"]
+      title: "Frontend Development",
+      icon: "💻",
+      description: "Modern, component-driven interfaces built for responsiveness, performance, and accessibility.",
+      concepts: [
+        "React.js",
+        "TypeScript",
+        "JavaScript (ES6+)",
+        "Tailwind CSS",
+        "HTML5 / CSS3",
+        "Responsive UI / UX",
+        "Three.js (WebGL)",
+        "Component Architecture",
+        "State Management"
+      ]
     },
     {
-      title: "Frontend Engineering",
-      concepts: ["React.js & Component Design", "Hooks & State Management", "Tailwind CSS & Responsive UI", "REST API Integration", "JavaScript (ES6+)"]
+      title: "Backend Development & APIs",
+      icon: "⚡",
+      description: "Robust RESTful APIs, dependency injection, service layers, and business logic pipelines.",
+      concepts: [
+        "Node.js",
+        "Express.js",
+        "RESTful APIs",
+        "CRUD Operations",
+        "API Integration",
+        "ASP.NET Core Web API",
+        "Dependency Injection",
+        "Java Spring Boot"
+      ]
     },
     {
-      title: "Databases & Storage",
-      concepts: ["SQL Server", "Entity Framework Core (ORM)", "Relational Database Schema Design", "Complex SQL Queries & Joins", "CRUD Operations"]
+      title: "Databases & ORM",
+      icon: "🛢️",
+      description: "Relational schema design, ORM mappings, indexing, and transactional integrity guarantees.",
+      concepts: [
+        "PostgreSQL",
+        "Prisma ORM",
+        "SQL Server",
+        "Entity Framework Core",
+        "MySQL",
+        "Relational Schema Design",
+        "Complex SQL Queries",
+        "GiST Exclusion Constraints"
+      ]
     },
     {
-      title: "Security & Microservices",
-      concepts: ["JWT Authentication", "Role-Based Access Control (RBAC)", "Java Spring Boot Notification Service", "Gmail SMTP Integration", "Service-Oriented Architecture"]
+      title: "Programming Languages",
+      icon: "🧩",
+      description: "Strong foundation in typed, object-oriented, and modern scripting languages.",
+      concepts: [
+        "TypeScript",
+        "JavaScript",
+        "C# (.NET)",
+        "Python",
+        "Java",
+        "C++",
+        "SQL"
+      ]
     },
     {
-      title: "DevOps, Cloud & Tools",
-      concepts: ["Docker Containerization", "AWS EC2 Deployment", "Git & GitHub Version Control", "Visual Studio & VS Code", "Postman API Testing"]
-    },
-    {
-      title: "Embedded & IoT Engineering",
-      concepts: ["C++ Arduino Sketching", "Arduino UNO R3", "Servo Motor Control Logic", "Breadboard Wiring & Hardware Logic", "State Machine Controls"]
+      title: "Tools & DevOps",
+      icon: "🛠️",
+      description: "Developer tooling, containerization, cloud hosting, and testing workflows.",
+      concepts: [
+        "Git & GitHub",
+        "Docker",
+        "AWS EC2",
+        "Postman",
+        "VS Code",
+        "Vite",
+        "Linux CLI",
+        "JWT & RBAC Security"
+      ]
     }
   ]
 };
 
-// Practical Engineering Highlights
-export const technicalHighlights = [
+// Projects Data (Featured: TurfBook, typeDon, Smart Restaurant Management System)
+export const projects = [
   {
-    title: "ASP.NET Core & REST APIs",
-    desc: "Built layered RESTful Web APIs using C# and ASP.NET Core with dependency injection, DTO request models, and Postman API validation.",
-    icon: "⚡"
+    id: "turfbook",
+    number: "01",
+    badge: "Featured Project · Production Live",
+    category: "Full-Stack Sports Venue Booking Platform",
+    title: "TurfBook",
+    subtitle: "Real-Time Slot Reservations, GiST Conflict Protection & 3D Arena",
+    image: "/turfbook-preview.png",
+    imageAlt: "TurfBook Sports Turf Discovery and Booking Platform Screenshot",
+    description:
+      "A full-stack sports venue booking platform designed to help users discover sports venues and manage bookings, with dedicated functionality for venue owners and administrators. Engineered with PostgreSQL GiST exclusion constraints to guarantee zero overlapping bookings at the database level, and integrated with a Python FastAPI analytical service for dynamic pricing and venue telemetry.",
+    keyFeatures: [
+      "PostgreSQL GiST exclusion constraints (btree_gist extension) to eliminate double-booking at the database layer",
+      "Role-Based Access Control (Customer, Owner, Admin) with JWT access and HttpOnly refresh token rotation",
+      "Responsive React & TypeScript UI featuring venue discovery, sport-specific filters, and interactive 3D arena preview",
+      "Node.js & Express.js REST API with Prisma ORM, centralized error handling, and interactive Swagger documentation",
+      "Python FastAPI analytical microservice for dynamic pricing, diagnostic health checks, and venue metrics"
+    ],
+    techTags: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "Prisma",
+      "PostgreSQL",
+      "FastAPI",
+      "Python",
+      "Three.js",
+      "Docker"
+    ],
+    links: {
+      github: "https://github.com/mangesh-lomte/TurfBook",
+      demo: "https://turf-book-real.vercel.app/"
+    },
+    isFlagship: true,
+
+    caseStudy: {
+      overview:
+        "TurfBook is an end-to-end sports venue reservation and management ecosystem built to solve high-concurrency booking conflicts in sports turf facilities, box cricket arenas, and badminton courts.",
+      problem:
+        "Sports facilities often face severe concurrency issues: multiple players attempting to reserve the exact same turf court and time window simultaneously. Application-level locks frequently fail under network latency, leading to double-bookings and disgruntled customers.",
+      solution:
+        "Implemented PostgreSQL GiST exclusion constraints utilizing the btree_gist extension. When concurrent transactions attempt to book overlapping time ranges on the same turf court, the database raises an exclusionary constraint violation error (code 23P01). The backend intercepts this error and cleanly translates it into an HTTP 409 Conflict, guaranteeing data consistency without brittle distributed locks.",
+      architectureHighlights: [
+        "Client: React 18 SPA with TypeScript, Tailwind CSS, and Three.js 3D arena visualization",
+        "API Gateway: Node.js / Express.js RESTful API structured around layered controllers and services",
+        "Data Layer: PostgreSQL 16 hosted with Prisma 5.22 ORM and raw SQL migrations for exclusion constraints",
+        "Analytical Service: Python 3.12 FastAPI microservice providing dynamic demand-based pricing models",
+        "Auth: Dual-token JWT architecture with short-lived access tokens and HttpOnly secure cookie refresh sessions"
+      ],
+      userRoles: [
+        { role: "Customer", access: "Discover local turfs by sport, inspect slot calendar, book time slots, view personal reservations." },
+        { role: "Venue Owner", access: "Create and update turf listings, configure court operating hours, manage slot prices, view earnings." },
+        { role: "Administrator", access: "System-wide venue moderation, user audits, platform analytics, and dispute resolution." }
+      ]
+    }
   },
   {
-    title: "JWT & Role-Based Authorization",
-    desc: "Implemented secure token-based authentication (JWT) and role-based access control (RBAC) for Customer, Chef, and Admin user roles.",
-    icon: "🔐"
+    id: "typedon",
+    number: "02",
+    badge: "Featured Project · Production Live",
+    category: "Competitive Typing Platform",
+    title: "typeDon",
+    subtitle: "Modern-Noir Aesthetic, 34-Lesson Academy & Zero-Latency Engine",
+    image: "/typedon-preview.png",
+    imageAlt: "typeDon Competitive Touch Typing Platform Screenshot",
+    description:
+      "A typing platform inspired by the competitive nature of typing tests, using a distinctive Modern-Noir visual identity to create a focused typing experience. Features a zero-latency typing engine, a 34-lesson touch typing academy across 5 progression stages, adaptive weak-key ngram drills, daily challenge contracts, and a 7-tier reputation hierarchy with real-time telemetry.",
+    keyFeatures: [
+      "Zero-latency typing engine with real-time HUD telemetry (WPM, Raw Speed, Accuracy, Consistency, and Streak)",
+      "34 structured lessons across 5 stages with visual obsidian keyboard and tactile anchor bump finger guides",
+      "Adaptive weak-key practice algorithm generating customized ngram exercises on the fly for troublesome letters",
+      "Daily challenge contract rotation (Speed, Accuracy, Endurance, Volume, Clean Run) with streak multipliers",
+      "7-tier syndicate reputation system from Outsider to Don with offline-first local storage and profile dossier",
+      "Built with React 19, TypeScript, Tailwind CSS v4, Framer Motion, and SignalR integration"
+    ],
+    techTags: [
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "SignalR",
+      "Vite",
+      "ASP.NET Core",
+      "Lucide React"
+    ],
+    links: {
+      github: "https://github.com/mangesh-lomte/typeDon",
+      demo: "https://type-don.vercel.app/"
+    },
+    isFlagship: true,
+
+    caseStudy: {
+      overview:
+        "typeDon is a high-performance touch-typing web application engineered with an Obsidian Modern-Noir aesthetic, prioritizing tactile responsiveness, structured learning loops, and competitive discipline.",
+      problem:
+        "Many online typing tests suffer from noticeable input lag caused by heavy state re-renders on every keystroke, generic gamification mechanics (coins, energy meters), and a lack of structured pedagogical progression from home-row fundamentals to speed fluency.",
+      solution:
+        "Built a zero-latency custom typing hook that captures key events directly, avoiding unnecessary DOM repaints. Created a 34-lesson pedagogical Academy structured across 5 tiers (Home Row, Expanding Territory, Lower Grounds, Syndicate Codes, Fluency & Graduation). Added an algorithmic weak-key analyzer that dynamically generates targeted practice drill sentences.",
+      architectureHighlights: [
+        "Client: React 19 + TypeScript with strict typing contracts and Tailwind CSS v4 styling",
+        "Motion Engine: Framer Motion for cinematic stage transitions and smooth progress dials",
+        "Telemetry HUD: Microsecond-precise WPM calculation, raw stroke counting, error categorization, and consistency standard deviation",
+        "Progression Engine: 7-tier hierarchy (Outsider → Associate → Soldato → Enforcer → Capo → Underboss → Don) based strictly on verified performance",
+        "Offline-First: Complete local storage persistence ensuring full utility even when disconnected"
+      ],
+      userRoles: [
+        { role: "Learner", access: "Follow 34 guided lessons with real-time finger position guidance and tactile anchor indicators." },
+        { role: "Practitioner", access: "Execute custom-timed tests (15s, 30s, 60s, 120s) and word count goals with instant restart shortcuts." },
+        { role: "Competitor", access: "Complete daily syndicate contracts, build reputation multipliers, and review detailed telemetry graphs." }
+      ]
+    }
   },
   {
-    title: "Java Spring Boot Notification Service",
-    desc: "Engineered an independent microservice using Java, Spring Boot, and Gmail SMTP to handle asynchronous email notification requests.",
-    icon: "📧"
-  },
-  {
-    title: "Relational Database & EF Core",
-    desc: "Designed normalized relational schemas in SQL Server using Entity Framework Core for transparent data mapping and transactional integrity.",
-    icon: "🛢️"
-  },
-  {
-    title: "QR Code Menu Workflow",
-    desc: "Developed contactless table QR code scanning flows linking customer mobile browsing directly to digital menus and backend order services.",
-    icon: "📲"
-  },
-  {
-    title: "Docker Containerization & AWS EC2",
-    desc: "Containerized application services using Docker images and deployed the platform onto AWS EC2 Linux virtual servers.",
-    icon: "☁️"
+    id: "smart-restaurant-management",
+    number: "03",
+    badge: "C-DAC / PG-DAC Project",
+    category: "Full-Stack Application | C-DAC Project",
+    title: "Smart AI & QR-Based Restaurant Management System",
+    subtitle: "Contactless QR Dining, Role-Based Dashboards & Microservices",
+    image: null,
+    imageAlt: "Smart Restaurant Management Architecture Blueprint",
+    description:
+      "A restaurant management application combining QR-based interactions, role-specific dashboards (Customer, Chef, Admin), backend REST APIs, and an independent Java Spring Boot notification microservice for automated email receipts. Built during PG-DAC at C-DAC with layered ASP.NET Core APIs, SQL Server, and Docker deployment.",
+    keyFeatures: [
+      "Table-specific QR code scanning workflow for instant digital menu browsing without physical paper menus",
+      "Layered ASP.NET Core REST API architecture with Dependency Injection and Entity Framework Core",
+      "Role-Based Access Control (RBAC) with JWT tokens securing Customer, Chef, and Admin endpoints",
+      "Independent Java Spring Boot notification microservice dispatching email confirmations via Gmail SMTP",
+      "Containerized with Docker and deployed on AWS EC2 cloud infrastructure"
+    ],
+    techTags: [
+      "React",
+      "Tailwind CSS",
+      "ASP.NET Core",
+      "C#",
+      "SQL Server",
+      "EF Core",
+      "Java",
+      "Spring Boot",
+      "JWT",
+      "Docker",
+      "AWS EC2"
+    ],
+    links: {
+      github: "https://github.com/mangesh-lomte/Qr-Dining-main",
+      demo: null
+    },
+    isFlagship: false,
+
+    caseStudy: {
+      overview:
+        "A multi-tier restaurant management platform developed as a C-DAC PG-DAC team project to digitize restaurant floor operations, customer orders, kitchen workflows, stock tracking, and automated receipts.",
+      problem:
+        "Traditional restaurant dining experiences rely on physical printed menus, verbal kitchen dispatching, and manual paper billing, creating table turn-around bottlenecks and order miscommunications.",
+      solution:
+        "Implemented table QR scanning opening a responsive digital menu. When an order is placed, it enters an ASP.NET Core order processing pipeline backed by SQL Server, immediately notifying kitchen displays and triggering an asynchronous Spring Boot microservice to dispatch customer email confirmations.",
+      architectureHighlights: [
+        "Frontend: React SPA with dynamic category browsing, cart state handling, and role dashboards",
+        "Backend API: ASP.NET Core Web API with clean Controller-Service-Repository separation",
+        "Data Storage: SQL Server normalized database managed via Entity Framework Core migrations",
+        "Notification Microservice: Java Spring Boot service integrating with Gmail SMTP via JavaMail",
+        "Infrastructure: Docker containerized services hosted on AWS EC2 Linux instances"
+      ],
+      userRoles: [
+        { role: "Customer", access: "Scan table QR code, browse digital menu, customize items, submit order, view order status." },
+        { role: "Chef", access: "Real-time kitchen order queue, table-specific item breakdown, milestone preparation updates." },
+        { role: "Admin", access: "Full menu and price CRUD, inventory stock monitoring, staff management, promotional offers." }
+      ]
+    }
   }
 ];
 
-export const contentCreation = {
-  badge: "Creative Work",
-  heading: "Projects & Creations",
-  description: "Building modern applications and interactive experiences.",
-  categories: []
-};
-
-export const leadershipList = [];
-
-// Internships Data
+// Internships / Work Experience Data
 export const internshipsList = [
   {
-    organization: "Software Development Internship",
-    role: "Software Development Intern",
-    duration: "July 2025 – December 2025",
-    skills: ["Software Engineering", "Full Stack Development", "API Integration", "Database Design"],
-    tech: ["Java", "React", "Node.js", "SQL"]
+    organization: "Nexprism",
+    role: "Software Developer Intern",
+    duration: "May 2026 – October 2026",
+    skills: [
+      "Web Application Development",
+      "Full-Stack Feature Engineering",
+      "RESTful API Integration",
+      "Database Schema Modeling",
+      "Software Maintenance & Debugging"
+    ],
+    tech: ["React", "Node.js", "Express.js", "REST APIs", "Git", "SQL"]
+  },
+  {
+    organization: "Txon, Pune",
+    role: "Web Developer Intern",
+    duration: "6 Months",
+    skills: [
+      "Responsive Web Design",
+      "User Interface Engineering",
+      "Cross-Browser Compatibility",
+      "Functional UI Testing",
+      "DOM & Performance Optimization"
+    ],
+    tech: ["JavaScript (ES6+)", "HTML5", "CSS3", "UI Testing", "Git"]
   }
 ];
 
@@ -504,290 +336,36 @@ export const internshipsList = [
 export const softSkillsList = [
   { name: "Problem Solving", icon: "🧩", desc: "Breaking down complex engineering tasks into clean, logical, and modular pieces." },
   { name: "Teamwork", icon: "🤝", desc: "Collaborating effectively with cross-functional teams to build robust software." },
-  { name: "Communication", icon: "💬", desc: "Clear, concise, and structured technical interactions." },
-  { name: "Adaptability", icon: "🌟", desc: "Quick to learn and implement new tools, frameworks, and technologies." },
-  { name: "Time Management", icon: "⏰", desc: "Efficiently prioritizing tasks to meet project deadlines." },
-  { name: "Continuous Learning", icon: "🧠", desc: "Always eager to stay up-to-date with modern development practices." }
+  { name: "Communication", icon: "💬", desc: "Clear, concise, and structured technical documentation and dialogue." },
+  { name: "Adaptability", icon: "🌟", desc: "Quick to learn and implement new tools, frameworks, and modern technologies." },
+  { name: "Time Management", icon: "⏰", desc: "Efficiently prioritizing tasks to meet project milestones and deliverables." },
+  { name: "Continuous Learning", icon: "🧠", desc: "Always eager to stay up-to-date with modern full-stack development practices." }
 ];
 
-export const projects = [
-  {
-    id: "smart-restaurant-management",
-    number: "01",
-    badge: "C-DAC / PG-DAC Project",
-    course: "Post Graduate Diploma in Advanced Computing (PG-DAC)",
-    category: "Full-Stack Web Application / Restaurant Management / Service-Oriented Architecture",
-    title: "Smart AI & QR-Based Restaurant Management System",
-    description:
-      "A modern web-based restaurant management platform that digitizes restaurant operations. Customers access a digital menu through QR codes, while administrators and restaurant staff manage menus, orders, inventory, staff, offers, authentication, and notifications. Combines a React frontend, ASP.NET Core backend services, SQL Server, JWT authentication, a Java Spring Boot notification service, Docker, and AWS EC2 deployment.",
-    techTags: [
-      "React.js",
-      "ASP.NET Core Web API",
-      "C#",
-      "SQL Server",
-      "Entity Framework Core",
-      "Java",
-      "Spring Boot",
-      "Gmail SMTP",
-      "JWT Auth",
-      "Docker",
-      "AWS EC2",
-      "Tailwind CSS"
-    ],
-    links: {
-      github: "https://github.com/mangesh-lomte/Qr-Dining-main",
-      demo: null,
-    },
-    isFlagship: true,
-
-    // Case Study Deep-Dive Information (14 Sections)
-    caseStudy: {
-      overview:
-        "A modern web-based restaurant management platform designed to digitize dining room operations, menu management, order fulfillment, stock tracking, staff oversight, and promotional offers. Features table QR code scanning for digital menu browsing, role-based access control for Customer, Chef, and Admin users, an independent Java Spring Boot email notification service, and containerized cloud deployment on AWS EC2.",
-      problem:
-        "Traditional restaurant operations rely heavily on physical paper menus, manual order taking by waitstaff, verbal kitchen communication, and paper record keeping. This often results in order delays, miscommunicated food customizations, zero real-time inventory tracking, inefficient staff allocation, and lack of automated customer communication.",
-      objectives: [
-        "Digitize order placement via table-specific QR code scanning.",
-        "Provide dedicated web dashboards tailored for Customer, Chef, and Admin roles.",
-        "Implement secure authentication and role-based access control using JWT tokens.",
-        "Engineered layered ASP.NET Core backend REST APIs backed by SQL Server relational database storage.",
-        "Build an independent notification microservice using Java Spring Boot and Gmail SMTP.",
-        "Containerize services with Docker and deploy on cloud infrastructure (AWS EC2)."
-      ],
-      modules: [
-        {
-          name: "Authentication Module",
-          icon: "🔐",
-          details: "User registration, credential login, JWT token generation, token validation, role-based authorization for Customer, Chef, and Admin roles."
-        },
-        {
-          name: "Menu Management Module",
-          icon: "📜",
-          details: "Menu item creation, item categories, price management, item availability toggles, and full CRUD operations for restaurant admins."
-        },
-        {
-          name: "Order Management Module",
-          icon: "🛒",
-          details: "Cart selection, order submission, item customization notes, real-time status transitions (Pending, Preparing, Ready, Served), order retrieval, and historical order processing."
-        },
-        {
-          name: "Inventory Management Module",
-          icon: "📦",
-          details: "Ingredient stock creation, quantity tracking, low-stock threshold monitoring, and inventory replenishment updates."
-        },
-        {
-          name: "Staff Management Module",
-          icon: "👥",
-          details: "Restaurant staff account creation, staff profiles, role assignment, contact info updates, and active status tracking."
-        },
-        {
-          name: "Offer Management Module",
-          icon: "🏷️",
-          details: "Promotional discount creation, promotional banner display, offer validity date ranges, and activation/deactivation controls."
-        },
-        {
-          name: "Notification Service Module",
-          icon: "📧",
-          details: "Independent Java Spring Boot microservice processing notification requests and dispatching confirmation emails via Gmail SMTP."
-        },
-        {
-          name: "QR Functionality Module",
-          icon: "📱",
-          details: "Table-specific QR code generation and digital menu viewing access."
-        }
-      ],
-      qrWorkflow: {
-        title: "QR Code Access & Digital Menu Flow",
-        description: "Customers scan table QR codes to access table-specific digital menus directly on their mobile browsers without paper menus.",
-        steps: [
-          "RESTAURANT TABLE",
-          "TABLE QR CODE",
-          "CUSTOMER MOBILE SCAN",
-          "DIGITAL MENU ACCESS",
-          "ORDER SELECTION & PLACEMENT"
-        ]
-      },
-      authFlow: {
-        title: "Authentication & Role-Based Authorization Flow",
-        description: "Secures protected API resources across Customer, Chef, and Admin roles.",
-        steps: [
-          "USER CREDENTIALS",
-          "LOGIN / REGISTRATION API",
-          "AUTHENTICATION VERIFICATION",
-          "JWT TOKEN GENERATION",
-          "JWT VALIDATION IN MIDDLEWARE",
-          "AUTHORIZED REST REQUEST",
-          "ROLE-BASED ACCESS CONTROL (RBAC)",
-          "PROTECTED RESOURCE ACCESS"
-        ],
-        roles: [
-          { role: "Customer Role", scope: "Scan QR code, view digital menu, place orders, view personal order history." },
-          { role: "Chef / Kitchen Role", scope: "Access live kitchen display queue, view table order items, update order preparation state." },
-          { role: "Admin Role", scope: "Full CRUD on menus, categories, stock inventory, staff records, promotional offers, and sales reports." }
-        ]
-      },
-      orderFlow: {
-        title: "Customer Order Execution Flow",
-        description: "Interactive visual pipeline from customer scan to SQL Server persistence and notification processing.",
-        steps: [
-          "CUSTOMER",
-          "SCAN QR CODE",
-          "REACT FRONTEND",
-          "DIGITAL MENU",
-          "SELECT ITEMS",
-          "SUBMIT ORDER",
-          "REST API GATEWAY",
-          "ORDER SERVICE",
-          "VALIDATION / BUSINESS LOGIC",
-          "ENTITY FRAMEWORK CORE",
-          "SQL SERVER DATABASE",
-          "ORDER STORED",
-          "NOTIFICATION SERVICE (REST CALL)",
-          "GMAIL SMTP",
-          "EMAIL / NOTIFICATION",
-          "FRONTEND CONFIRMATION STATUS"
-        ]
-      },
-      notificationService: {
-        title: "Java Spring Boot Notification Microservice",
-        description: "An independently implemented notification service decoupling email transmission from core ordering APIs.",
-        stack: ["Java", "Spring Boot", "Gmail SMTP Protocol"],
-        steps: [
-          "MAIN APPLICATION API",
-          "NOTIFICATION REST REQUEST",
-          "SPRING BOOT NOTIFICATION SERVICE",
-          "GMAIL SMTP SERVER",
-          "CUSTOMER / STAFF EMAIL RECEIPT"
-        ]
-      },
-      databaseLayer: {
-        title: "SQL Server & Entity Framework Core",
-        description: "Relational data architecture maintaining data integrity across normalized entities.",
-        tables: [
-          "Users (UserId, Name, Email, PasswordHash, RoleId, CreatedAt)",
-          "Menus (MenuId, CategoryId, ItemName, Description, Price, IsAvailable)",
-          "Categories (CategoryId, CategoryName, DisplayOrder)",
-          "Orders (OrderId, TableId, UserId, OrderStatus, TotalAmount, CreatedAt)",
-          "OrderItems (OrderItemId, OrderId, MenuId, Quantity, UnitPrice, SpecialNotes)",
-          "Inventory (StockId, ItemName, Quantity, Unit, MinimumThreshold)",
-          "Staff (StaffId, UserId, Designation, ContactPhone, IsActive)",
-          "Offers (OfferId, Code, Title, DiscountPercentage, ValidFrom, ValidUntil, IsActive)"
-        ]
-      },
-      deployment: {
-        title: "Docker Containerization & AWS EC2 Deployment",
-        description: "Services are containerized with Docker and deployed onto AWS EC2 cloud instances for reliable accessibility.",
-        steps: [
-          "APPLICATION SERVICES",
-          "DOCKER CONTAINERIZATION",
-          "DOCKER IMAGES & CONTAINERS",
-          "AWS EC2 INSTANCE HOISTING"
-        ]
-      },
-      testingValidation: {
-        title: "Testing & Operational Validation",
-        description: "Comprehensive functional testing executed across key operational modules prior to deployment.",
-        coveredAreas: [
-          "User Registration & Login Authentication",
-          "Protected API Route Access Controls",
-          "Menu Creation, Update & Stock Availability Toggles",
-          "Table QR Code Scan & Digital Menu Access",
-          "Order Creation, Item Customization & Order Placement",
-          "Live Order Status Transitions (Pending, Preparing, Ready, Served)",
-          "Inventory Stock Updates & Low-Stock Alerts",
-          "Staff Record Updates & Profile Management",
-          "Offer Creation & Promotional Code Validation",
-          "Notification Service Request Handling & Email Dispatch",
-          "Invalid Request Handling & Error Payload Formatting",
-          "JWT Expiration & Token Tamper Validation",
-          "Docker Container Deployment & AWS EC2 HTTP Accessibility"
-        ]
-      },
-      aiFoundation: {
-        title: "Python / AI Foundation for Intelligent Operations",
-        description: "Incorporates a Python data-processing foundation designed to support intelligent restaurant operations, such as analyzing order history trends and structured menu data for future operational insights."
-      },
-      outcome:
-        "Delivered a working, service-oriented restaurant management platform demonstrating modular web engineering, secure authentication, relational data persistence, microservice notification integration, containerization, and cloud deployment."
-    }
-  },
-  {
-    id: "road-safety-alert-system",
-    number: "02",
-    badge: "BE IT College Project · 2024",
-    category: "Embedded Systems & IoT / Road Safety",
-    title: "Road Safety Alert System",
-    description:
-      "An IoT-based pedestrian safety prototype developed at Genba Sopanrao Moze College of Engineering, Balewadi, Pune. Uses Arduino UNO R3, LEDs, and three servo motors to coordinate traffic indication, vehicle barriers, and pedestrian crossing movement.",
-    institution: "Genba Sopanrao Moze College of Engineering, Balewadi, Pune",
-    techTags: ["C++", "Arduino IDE", "Arduino UNO R3", "Servo Motors", "LEDs", "Breadboard", "Jumper Wires"],
-    links: {
-      github: "https://github.com/mangesh-lomte/road-safety-alert-system",
-      demo: null,
-    },
-    isFlagship: false,
-
-    // Case Study Deep-Dive Information (8 Sections)
-    caseStudy: {
-      overview:
-        "An IoT-based pedestrian safety prototype designed using Arduino UNO R3, LEDs, and three servo motors to coordinate traffic indication, vehicle barriers, and pedestrian crossing movement. Developed as a Bachelor of Engineering (BE) Information Technology project at Genba Sopanrao Moze College of Engineering, Balewadi, Pune.",
-      problem:
-        "Manual pedestrian crossings in high-traffic zones often suffer from pedestrian jaywalking, poor signal visibility, and lack of physical barriers. Approaching vehicles frequently fail to stop during pedestrian red signals, creating severe safety risks at un-gated urban pedestrian crossings.",
-      howItWorks:
-        "Two servo motors act as vehicle barriers on either side of the road. When the traffic signal is red, the barrier servos rotate to approximately 45° to restrict vehicle movement. A third servo controls the pedestrian crossing and rotates approximately 90° during the pedestrian green phase. When the pedestrian signal becomes red, the crossing servo returns to its initial position. LEDs represent traffic-light states. Arduino controls the LEDs and servo motors according to the programmed logic.",
-      hardware: [
-        "Arduino UNO R3 Microcontroller Board",
-        "3 Servo Motors (2 Vehicle Barriers @ ~45°, 1 Pedestrian Gate @ ~90°)",
-        "LED Indicators (Red, Yellow, Green Traffic Signal Simulation)",
-        "Solderless Breadboard",
-        "Male-to-Male & Male-to-Female Jumper Wires"
-      ],
-      software: [
-        "C++ Language / Arduino C++ Sketch",
-        "Arduino IDE (Integrated Development Environment)",
-        "Arduino Servo Library (<Servo.h>)"
-      ],
-      controlLogic: [
-        "Initial State: Vehicle Signal Green (LED Green ON), Vehicle Barriers UP (0°), Pedestrian Signal Red (LED Red ON), Pedestrian Gate CLOSED (0°).",
-        "Transition Phase: Vehicle Signal Yellow (LED Yellow ON) for 3 seconds to alert oncoming drivers.",
-        "Pedestrian Crossing Phase: Vehicle Signal Red (LED Red ON), Vehicle Barrier Servos rotate to ~45° to block traffic lane; Pedestrian Signal Green (LED Green ON), Pedestrian Crossing Servo rotates to ~90° allowing crossing.",
-        "Reset Phase: Pedestrian Signal Red, Pedestrian Crossing Servo returns to 0°; Vehicle Barrier Servos return to 0°, Vehicle Signal returns to Green."
-      ],
-      outcome:
-        "Successfully constructed and validated a working hardware prototype demonstrating automated vehicle-barrier and pedestrian-crossing control for a road-safety application.",
-      futureScope: [
-        "Integration into smart traffic-management infrastructure.",
-        "Real-time communication between pedestrian signals and traffic lights.",
-        "Dynamic signal timing based on pedestrian crossing demand."
-      ]
-    }
-  }
-];
-
-export const certificates = {
-  featured: [],
-  viewAllUrl: "#",
-};
-
+// Education Qualifications Data
 export const education = {
   degree: "B.Tech – Information Technology",
   institution: "Genba Sopanrao Moze College of Engineering",
   cgpa: "8.3",
-  graduation: "2024",
-  pgdac: "PG-DAC / C-DAC",
+  graduation: "2020 – 2024",
+  pgdac: "Post Graduate Certificate Program in Advanced Computing (PGCP-AC / PG-DAC)",
+  cdacInstitution: "Centre for Development of Advanced Computing (C-DAC), Pune",
+  cdacYear: "2026",
 };
 
+// Footer Content
 export const footerContent = {
   taglines: [
     "Mangesh Lomte",
-    "Software Development",
-    "React · ASP.NET Core · Spring Boot",
-    "SQL Server · Docker · AWS EC2",
+    "Software Developer",
+    "Full-Stack Web Development",
+    "React · TypeScript · Node.js · PostgreSQL",
   ],
-  credential: "B.Tech IT · PG-DAC",
+  credential: "B.Tech IT · PGCP-AC (C-DAC)",
   copyright: `© ${new Date().getFullYear()} Mangesh Lomte | Software Developer`,
 };
 
+// EmailJS Configuration
 export const emailjsConfig = {
   serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || "",
   templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "",
@@ -796,20 +374,24 @@ export const emailjsConfig = {
 
 // Structured Knowledge Base for "Ask Mangesh AI" Assistant
 export const aiKnowledgeBase = {
-  about: "Mangesh Lomte is a Software Developer with a B.Tech in Information Technology (2024, CGPA 7.22) from Genba Sopanrao Moze College of Engineering, Pune, and a Post Graduate Diploma in Advanced Computing (PG-DAC) from C-DAC. He specializes in React.js, ASP.NET Core Web API, C#, SQL Server, Java Spring Boot, Docker, AWS EC2, and C++ for IoT.",
-  skills: "Mangesh's technical skill set includes: Programming Languages: C#, Java, C++, JavaScript. Frontend: React.js, Tailwind CSS, HTML5, CSS3. Backend & Services: ASP.NET Core Web API, Entity Framework Core, Java Spring Boot (Notification Service), REST APIs, Gmail SMTP. Databases: SQL Server, Relational Schema Design. Security: JWT Authentication, Role-Based Access Control (RBAC). DevOps & Cloud: Docker, AWS EC2. IoT: Arduino UNO R3, Servo Motors, C++ Hardware Controls.",
+  about: "Mangesh Lomte is a Software Developer specializing in full-stack web development with React.js, TypeScript, Node.js, Express.js, and PostgreSQL. He holds a B.Tech in Information Technology (2020-2024, CGPA: 8.3) and C-DAC PGCP-AC credentials. He builds practical, high-performance web applications including TurfBook and typeDon.",
+  skills: "Mangesh's technical skillset includes: Frontend: React.js, TypeScript, JavaScript (ES6+), Tailwind CSS, HTML5, CSS3, Three.js. Backend: Node.js, Express.js, ASP.NET Core Web API, RESTful APIs, Java Spring Boot. Databases: PostgreSQL, MySQL, Prisma ORM, SQL Server, Entity Framework Core. Tools & DevOps: Git, GitHub, Docker, AWS EC2, Postman, VS Code, Vite.",
   projects: [
     {
-      name: "Smart AI & QR-Based Restaurant Management System",
-      details: "C-DAC PG-DAC Project. Full-stack platform featuring React.js frontend, ASP.NET Core Web API backend (Layered Architecture, EF Core), SQL Server database, independent Java Spring Boot notification microservice (Gmail SMTP), JWT authentication with RBAC (Customer, Chef, Admin), table QR code menu scanning, Docker containerization, AWS EC2 cloud deployment, and Python/AI foundation for intelligent restaurant operations."
+      name: "TurfBook",
+      details: "Full-Stack Sports Venue Booking Platform built with React, TypeScript, Node.js, Express.js, Prisma ORM, PostgreSQL (with GiST exclusion constraints to eliminate double bookings), and a Python FastAPI analytical microservice for dynamic pricing."
     },
     {
-      name: "Road Safety Alert System",
-      details: "BE Information Technology College Project (2024) at Genba Sopanrao Moze College of Engineering, Balewadi, Pune. IoT pedestrian safety prototype using Arduino UNO R3, C++ in Arduino IDE, LEDs, and 3 servo motors (2 vehicle barriers at ~45°, 1 pedestrian gate at ~90°) to automate traffic indication and crossing safety."
+      name: "typeDon",
+      details: "Competitive Touch-Typing Platform with a Modern-Noir aesthetic built using React 19, TypeScript, Tailwind CSS v4, Framer Motion, and SignalR. Features zero-latency keyboard telemetry HUD, a 34-lesson touch typing academy across 5 progression stages, adaptive weak-key ngram drills, and a 7-tier syndicate reputation hierarchy."
+    },
+    {
+      name: "Smart AI & QR-Based Restaurant Management System",
+      details: "C-DAC PG-DAC Full-Stack Application combining table QR digital menus, role-specific web dashboards (Customer, Chef, Admin), ASP.NET Core backend REST APIs, SQL Server, and an independent Java Spring Boot notification microservice with Gmail SMTP."
     }
   ],
-  internship: "Mangesh completed a Software Development Internship from July 2025 to December 2025, where he worked on Full Stack Development, API integration, database design, software engineering best practices, and tech stacks including Java, React, Node.js, and SQL.",
-  education: "B.Tech in Information Technology from Genba Sopanrao Moze College of Engineering, Balewadi, Pune (Graduated 2024, CGPA: 7.22) and PG-DAC (Post Graduate Diploma in Advanced Computing) from C-DAC.",
-  location: "Vapi, Gujarat, India.",
-  contact: "You can reach Mangesh via the Contact Form on this website or connect via GitHub (github.com/mangesh-lomte) and LinkedIn (linkedin.com/in/mangesh-lomte)."
+  internship: "Mangesh has worked as a Software Developer Intern at Nexprism (May 2026 – October 2026) building full-stack web features with React, Node.js, Express, and Git; and as a Web Developer Intern at Txon, Pune (6 months) engineering responsive web pages with HTML, CSS, and JavaScript.",
+  education: "B.Tech in Information Technology from Genba Sopanrao Moze College of Engineering (2020–2024, CGPA: 8.3) and Post Graduate Certificate Program in Advanced Computing (PGCP-AC) from C-DAC Pune (2026).",
+  location: "Pune, India.",
+  contact: "Email: mangesh.lomte.2002@gmail.com, GitHub: github.com/mangesh-lomte, LinkedIn: linkedin.com/in/mangesh-lomte."
 };

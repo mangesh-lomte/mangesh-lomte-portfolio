@@ -89,6 +89,12 @@ section[data-stars="off"] {
 /* HERO RESPONSIVE ENGINE (MOBILE / DESKTOP-SITE / DESKTOP)     */
 /* ============================================================ */
 
+/* Ensure critical above-the-fold hero content is always visible immediately */
+#home [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 /* Base / Portrait / Mobile / "Desktop Site" on Phone Viewports */
 .hero-section-container {
   position: relative;
@@ -181,8 +187,8 @@ section[data-stars="off"] {
   display: none !important;
 }
 
-/* REAL DESKTOP & WIDE LANDSCAPE (Width >= 1024px AND Aspect Ratio >= 1.15:1) */
-@media (min-width: 1024px) and (min-aspect-ratio: 1.15/1) {
+/* DESKTOP (Width >= 1024px) */
+@media (min-width: 1024px) {
   .hero-section-container {
     min-height: 0;
     height: 100vh;
@@ -230,8 +236,8 @@ section[data-stars="off"] {
   }
 }
 
-/* TABLET LANDSCAPE (Width between 768px and 1023px AND Aspect Ratio >= 1.2:1) */
-@media (min-width: 768px) and (max-width: 1023px) and (min-aspect-ratio: 1.2/1) {
+/* TABLET (Width between 768px and 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
   .hero-section-container {
     min-height: 0;
     height: 100vh;
